@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=9bac5b0780f828c74f54b5c028be6aba&units=metric")
             .then(response => {
-                if (!response.ok) {
+                if (!response.ok) {  
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 return response.json();
@@ -24,5 +24,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Error:", err);
                 alert("Failed to fetch weather data. Please try again later.");
             });
-    });
+    })
 });
